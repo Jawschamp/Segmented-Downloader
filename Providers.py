@@ -4,4 +4,3 @@ class ProvidersEnum:
 
     def get_available_providers(self):
         pass
-
