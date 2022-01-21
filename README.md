@@ -9,8 +9,10 @@ from Parser.SegmentParser import SegmentParser
 from VideoCombiner.video_combiner import VideoCombiner, VideoUtils
 from VideoCombiner.FileUtils import FileOperations
 
+import threading
+
 Segment_URL = ""
-Video_Location = r"C:\Users\dbroo\Videos\Segments" # change this
+Video_Location = r"D:\Videos\Segments" # Your download location
 
 class Vars(SegmentDownloader, VideoUtils, FileOperations):
     def __init__(self, url, download_location):
@@ -21,12 +23,16 @@ class Vars(SegmentDownloader, VideoUtils, FileOperations):
         self.list_videos = FileOperations(Video_Location).list_files()
         self.video_size = FileOperations(Video_Location).get_file_size(self.list_videos)
 
-    def test(self):
-        parse_url = SegmentParser(Segment_URL).url_parser()
-        self.create_or_store_to_dir
-        print(self.http_status_algorithm(parse_url))
-        print(self.video_size)
 
+    def test(self):
+        print(self.temp_video_download_location)
+        parse_url = SegmentParser.url_parser(self)
+        print("Estimated amount of of segments are:", len(parse_url))
+        self.create_or_store_to_dir
+        t1 = threading.Thread(target=self.http_status_algorithm(parse_url))
+        t2 = threading.Thread(target=self.video_size)
+        t1.start()
+        t2.start()
 
 Vars(Segment_URL, Video_Location).test()
 ```
