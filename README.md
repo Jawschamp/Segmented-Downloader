@@ -2,7 +2,7 @@
 Unfamiliar to Video Segments?
 A video segment (or chunk) is a fragment of video information that is a collection of video frames. Combined together, these segments make up a whole video. In streaming, video segments vary in size.
 
-# Example (What I use to test the Python API **AGAIN PYTHON**)
+# Example (What I use this to test the **Python API**)
 ```python
 from SegmentedDownloader import SegmentDownloader
 from Parser.SegmentParser import SegmentParser
@@ -12,7 +12,7 @@ from VideoCombiner.FileUtils import FileOperations
 import threading
 
 Segment_URL = ""
-Video_Location = r"D:\Videos\Segments" # Your download location
+Video_Location = r"D:\Videos\Segments" # Change this to where you want your videos to be downloaded to
 
 class Vars(SegmentDownloader, VideoUtils, FileOperations):
     def __init__(self, url, download_location):
