@@ -1,11 +1,12 @@
-class SegmentParser:
-    def url_splitter(segment_url):
-        segment_url = segment_url.split("seg-")[0] + "seg-" # + SegmentParser.add_to_array(segment_url)[0]
-        array = []
-        for i in range(1, 20):
-            array.append(segment_url + str(i) + "-v1-a1.ts")
-        return array
+from SegmentedDownloader import SegmentDownloader
 
-    def parse_array(array: function):
-        for segmet_url_strings in array:
-            return segmet_url_strings
+class SegmentParser(SegmentDownloader):
+    def url_parser(self):
+        """"The paramater highest_segement should be the highest segment number
+        It should either be manually placed or passed via the 
+        SegmentDownloader.http_status_algorithm() function"""
+        #segment_url = 
+        array = []
+        for i in range(1, 9999):
+            array.append(self.url.split("seg-")[0] + "seg-" + str(i) + "-v1-a1.ts")
+        return array
