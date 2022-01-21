@@ -2,6 +2,7 @@
 Unfamiliar to Video Segments?
 A video segment (or chunk) is a fragment of video information that is a collection of video frames. Combined together, these segments make up a whole video. In streaming, video segments vary in size.
 
+**This Library makes very small uses of the threading library but the download function is 100% wrapped into a thread for I/O bound operations. **More** improvments will be made very soon.**
 # Example (What I use this to test the **Python API**)
 ```python
 from SegmentedDownloader import SegmentDownloader
@@ -37,4 +38,3 @@ class Vars(SegmentDownloader, VideoUtils, FileOperations):
 Vars(Segment_URL, Video_Location).test()
 ```
 
-This Library makes very small uses of the threading library but the download function is 100% wrapped into a thread for I/O bound operations. **More** improvments will be made very soon.
