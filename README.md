@@ -28,6 +28,7 @@ class Vars(SegmentDownloader, VideoUtils, FileOperations):
         print(self.video_size)
 
 
-
 Vars(Segment_URL, Video_Location).test()
 ```
+
+This Library makes very small uses of the threading library but the download function is 100% wrapped into a thread for I/O bound operations. **More** improvments will be made very soon.
