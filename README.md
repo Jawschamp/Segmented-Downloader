@@ -8,7 +8,7 @@ Currently this Library does not completly work as it is having both of it's API'
 **Note:** Currently there is no way to see if you already have a full stream**
 # Example (What I use this to test the **Python API**)
 
-Massive thanks to [SirSloth](https://github.com/SlothsAreLazyTho/) for writting the C# version into something usful.
+Massive thanks to [SirSloth](https://github.com/SlothsAreLazyTho/) for writting the C# version into something useful.
 Thanks to [Muh2k](https://github.com/muh2k) For Englishifying the project
 
 from SegmentedDownloader import SegmentDownloader
