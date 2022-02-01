@@ -9,7 +9,7 @@ Currently this Library does not completly work as it is having both of it's API'
 # Example (What I use this to test the **Python API**)
 
 Massive thanks to [SirSloth](https://github.com/SlothsAreLazyTho/) for writting the C# version into something useful.
-Thanks to [Muh2k](https://github.com/muh2k) For Englishifying the project
+And Thanks to [Muh2k](https://github.com/muh2k) For Englishifying the project.
 
 
 ```python
