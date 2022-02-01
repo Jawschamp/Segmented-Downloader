@@ -11,6 +11,8 @@ Currently this Library does not completly work as it is having both of it's API'
 Massive thanks to [SirSloth](https://github.com/SlothsAreLazyTho/) for writting the C# version into something useful.
 Thanks to [Muh2k](https://github.com/muh2k) For Englishifying the project
 
+
+```python
 from SegmentedDownloader import SegmentDownloader
 from Parser.SegmentParser import SegmentParser
 from VideoCombiner.FileUtils import FileOperations
@@ -20,7 +22,6 @@ import threading
 
 Segment_URL = ""
 Video_Location = r"D:\Videos\Segments" # Change this to where you want your videos to be downloaded to
-```python
 class Vars(SegmentDownloader, FileOperations):
     def __init__(self, download_location):
         self.download_location = download_location
