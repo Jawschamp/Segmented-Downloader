@@ -20,7 +20,7 @@ import threading
 
 Segment_URL = ""
 Video_Location = r"D:\Videos\Segments" # Change this to where you want your videos to be downloaded to
-
+```python
 class Vars(SegmentDownloader, FileOperations):
     def __init__(self, download_location):
         self.download_location = download_location
