@@ -355,3 +355,4 @@ MigrationBackup/
 #Specified files to be ignored
 *.json
 *.mp4
+ffmpeg.exe
