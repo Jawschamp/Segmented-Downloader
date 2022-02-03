@@ -4,6 +4,8 @@ import time
 import os
 
 from VideoCombiner.FileUtils import FileOperations
+
+
 class SegmentDownloader(FileOperations):
     def __init__(self):
         super()
@@ -28,7 +30,7 @@ class SegmentDownloader(FileOperations):
                 print("Error: " + str(response.status_code), time.time())
                 break
 
-    def download_segment(self, urls: list):
+    def download_segment(self, urls):
         file = requests.get(urls).content
         file_name = urls.split("seg-")[1].split("-v1-a1.ts")[0]
         os.chdir(self.temp_video_download_location)

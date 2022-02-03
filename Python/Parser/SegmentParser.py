@@ -1,5 +1,6 @@
 from Python.SegmentedDownloader import SegmentDownloader
 
+
 class SegmentParser(SegmentDownloader):
     def url_parser(self):
         array = []

@@ -9,14 +9,14 @@ Video_Location = r"D:\Videos\Segments"
 
 
 class Vars(SegmentDownloader, FileOperations):
-    def __init__(self, url, final_directory):
+    def __init__(self, url):
         self.url = url
         self.temp_video_download_location = Video_Location
-        self.final_directory = final_directory
         #self.test = VideoCombiner(self.download_location).test()
 
     def concation(self):
-        VideoCombiner(self.download_location).concate_videos_txt_file()
+        VideoCombiner(self.temp_video_download_location).concate_videos_txt_file()
+        VideoCombiner(self.temp_video_download_location).concat_videos(self.temp_video_download_location + "/Movie")
 
     def download(self):
         parse_url = SegmentParser.url_parser(self)

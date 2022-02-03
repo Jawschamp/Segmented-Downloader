@@ -14,9 +14,12 @@ class VideoCombiner(FileOperations):
             for files in VideoCombiner.sort_videos(self):
                 file.write("file" + " '" + str(files) + ".mp4" + "'\n")
 
-    def concat_videos(self):
+    def concat_videos(self, output_dir):
         os.chdir(self.temp_video_download_location)
-        ffmpeg.input()
+        try:
+            ffmpeg.input("txt.txt", f="concat").output("{}/movie.mp4".format(output_dir)).run()
+        except ffmpeg.Error:
+            pass
 
     def sort_videos(self):
         array = []
